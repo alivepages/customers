@@ -24,7 +24,7 @@ class CustomersController extends BaseController{
         } elseif($email) {
             $data = CustomersModel::where('email',$email)->where('status','A')->first();   
         } 
-        if(!data) {
+        if(!$data) {
             return response('Customer not found');
         }
 
